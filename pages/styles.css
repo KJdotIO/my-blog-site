@@ -1,0 +1,88 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+main {
+  margin: 50px 0px;
+}
+
+/* ===== Variables ===== */
+/* ===== Fonts and Text ===== */
+/* ===== Mixins ===== */
+/* ===== Navbar Stuff ===== */
+.navbar {
+  font-family: "Poppins";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 20px 40px;
+}
+
+.navbar .nav_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .nav_link {
+  display: none;
+  text-decoration: none;
+  color: #303030;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  font-weight: 500;
+}
+
+.navbar .mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+}
+
+.logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+}
+
+/* ===== Landing Page Stuff ===== */
+.landingimage-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landingimage-container .landingimage {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .navbar .nav_link {
+    display: block;
+  }
+  .navbar .mobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

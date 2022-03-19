@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+}
+li{
+    list-style-type: none;
+}
+main{
+    margin: 50px 0px;
+}
+
+/* ===== Variables ===== */
+
+
+/* ===== Fonts and Text ===== */
+// Nav
+$navFont: 'Poppins';
+$universalTextColor: #303030;
+
+// Nav links
+$navLinksSize: 1.2rem;
+$navLogo: 2.5rem;
+
+// Headings
+$headingFont: 'Butler Stencil';
+$headingFontSize: 2.5rem;
+$headingDescFont: 'Space Mono';
+
+// Article description
+$articleDescFont: 'Poppins';
+$articleDescSize: 1.4rem;
+
+/* ===== Mixins ===== */
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexNoAlign {
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Navbar Stuff ===== */
+.navbar{
+    font-family: $navFont;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid hsl(0, 0%, 50%);
+    padding: 20px 40px;
+    .nav_items {
+        display: flex;
+    }
+
+    .nav_link {
+        display: none;
+        text-decoration: none;
+        color: $universalTextColor;
+        font-size: $navLinksSize;
+        margin-left: 2rem;
+        font-weight: 500;
+    }
+    
+    .mobile{
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+}
+.logo{
+    margin-right: auto;
+    font-size: 2.5rem;
+}
+
+
+/* ===== Landing Page Stuff ===== */
+.landingimage-container{
+    @include flexNoAlign();
+    .landingimage {
+        max-width: 100%;
+    }
+}
+
+
+@media (min-width: 768px){
+    .navbar{
+        .nav_link{
+            display: block;
+        }
+
+        .mobile{
+            display: none;
+        }
+    }
+}
