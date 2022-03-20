@@ -74,6 +74,8 @@ main {
 .logo {
   margin-right: auto;
   font-size: 2.5rem;
+  color: #303030;
+  font-weight: 700;
 }
 
 /* ===== Landing Page Stuff ===== */
