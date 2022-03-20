@@ -22,9 +22,6 @@ main {
   margin: 50px 0px;
 }
 
-/* ===== Variables ===== */
-/* ===== Mixins ===== */
-/* ===== Navbar Stuff ===== */
 .navbar {
   font-family: "Space Mono";
   display: -webkit-box;
@@ -76,64 +73,109 @@ main {
   font-size: 2.5rem;
 }
 
-/* ===== Landing Page Stuff ===== */
-.landingimage-container {
+footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #202020;
+  color: #fff;
+  padding: 30px;
 }
 
-.landingimage-container .landingimage {
-  max-width: 100%;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-  cursor: pointer;
+footer h1 {
+  margin-bottom: 20px;
+  font-family: "Space Mono";
 }
 
-.landingimage-container .landingimage:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.landingimage-container .landingimage:focus {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.landingpage_text-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+footer p {
+  font-family: "Space Mono";
   text-align: center;
-  margin-top: 40px;
+  padding: 0 50px;
 }
 
-.landingpage_text-container .landingpage_header {
-  padding: 0px 40px;
+footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  gap: 50px;
+  margin: 30px;
+}
+
+footer .me {
+  margin-top: 20px;
+}
+
+footer .bx-heart {
+  color: #f8657d;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  margin: 50px 0px;
+}
+
+.title {
   font-family: "Butler Stencil";
   font-size: 2.5rem;
-  width: 858px;
+  color: #303030;
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 50px;
 }
 
-.landingpage_desc {
-  margin-top: 2rem;
+.undertitle {
+  font-family: "Space Mono";
+  font-size: 1.2rem;
+  color: #303030;
+  text-align: center;
+  margin: 25px 0px;
+}
+
+.mainimg-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0px 40px;
-  text-align: center;
-  font-family: "Space Mono";
-  font-size: 1.2rem;
-  margin-bottom: 40px;
+  width: 100%;
+}
+
+.mainimg-container .mainimg {
+  max-width: 90%;
 }
 
 .divider {
@@ -143,15 +185,107 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 35px 0px;
+  max-width: 100%;
+}
+
+.divider hr {
+  width: 600px;
+  max-width: 90%;
+  opacity: 75%;
+}
+
+.author-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.author-container .authorimg {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.author-container .textinfo {
+  margin-left: 1rem;
+}
+
+.author-container .textinfo .authorname {
+  font-size: 1rem;
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+.author-container .textinfo .when {
+  font-size: 0.8rem;
+  font-family: 'Poppins';
+}
+
+.introduction {
+  font-family: 'Amiri';
+  font-size: 1.3rem;
+  margin: 20px 0px 40px 0px;
+}
+
+.subheading {
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.blogimg {
+  max-width: 100%;
   margin-bottom: 40px;
 }
 
-.divider .line {
+.maintext {
+  font-family: 'Amiri';
+  font-size: 1.3rem;
+  margin: 20px 0px 40px 0px;
+}
+
+.undersubheading {
+  font-family: 'Amiri';
+  font-size: 1.3rem;
+  margin: 20px 0px;
+}
+
+main-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main-2 .main-blog {
   width: 640px;
   max-width: 90%;
 }
 
-/* ===== Articles stuffs ===== */
+main-2 .more_articles-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main-2 .more_articles-container .eye {
+  width: 60px;
+  position: relative;
+  top: -20px;
+}
+
 .articles_header {
   font-family: "Butler Stencil";
   font-size: 2.5rem;
@@ -233,57 +367,6 @@ main {
           text-decoration: underline 2px;
 }
 
-/*Footer Stuffs*/
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #202020;
-  color: #fff;
-  padding: 30px;
-}
-
-footer h1 {
-  margin-bottom: 20px;
-  font-family: "Space Mono";
-}
-
-footer p {
-  font-family: "Space Mono";
-  text-align: center;
-  padding: 0 50px;
-}
-
-footer .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  gap: 50px;
-  margin: 30px;
-}
-
-footer .me {
-  margin-top: 20px;
-}
-
-footer .bx-heart {
-  color: #f8657d;
-}
-
 @media (min-width: 768px) {
   .navbar .nav_link {
     display: block;
@@ -291,5 +374,8 @@ footer .bx-heart {
   .navbar .mobile {
     display: none;
   }
+  .title {
+    padding: 0px 100px;
+  }
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=blogstyles.css.map */

@@ -1,0 +1,66 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexNoAlign {
+    display: flex;
+    justify-content: center;
+}
+@mixin headings {
+    font-family: $headingFont;
+    font-size: $headingFontSize;
+    color: $universalTextColor;
+}
+
+@mixin headingDesc {
+    font-family: $headingDescFont;
+    font-size: $headingDescFontSize;
+    color: $universalTextColor;
+}
+@mixin authorImg{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+@mixin authorName {
+    font-size: 1rem;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+@mixin whenInfo {
+    font-size: 0.8rem;
+    font-family: 'Poppins';
+}
+
+//Blog text stuffs
+@mixin subHeading {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+@mixin bodyText {
+    font-family: 'Amiri';
+    font-size: 1.3rem;
+    margin: 20px 0px 40px 0px;
+}
+@mixin underSubHeading {
+    font-family: 'Amiri';
+    font-size: 1.3rem;
+    margin: 20px 0px;
+} 
+
+@mixin articleDesc {
+    font-family: $articleDescFont;
+    font-size: $articleDescSize;
+    font-weight: 600;
+    color: $universalTextColor;
+}
+@mixin articlesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 150px;
+}
