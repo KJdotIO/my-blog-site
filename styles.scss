@@ -127,6 +127,14 @@ $articleDescSize: 1rem;
     @include flexNoAlign();
     .landingimage {
         max-width: 100%;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:focus{
+            transform: scale(1.1);
+        }
+        transition: 200ms ease-in-out;
+        cursor: pointer;
     }
 }
 

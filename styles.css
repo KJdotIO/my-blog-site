@@ -89,6 +89,19 @@ main {
 
 .landingimage-container .landingimage {
   max-width: 100%;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.landingimage-container .landingimage:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.landingimage-container .landingimage:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .landingpage_text-container {
