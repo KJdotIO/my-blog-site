@@ -13,6 +13,11 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 main {
   margin: 50px 0px;
 }
@@ -22,7 +27,7 @@ main {
 /* ===== Mixins ===== */
 /* ===== Navbar Stuff ===== */
 .navbar {
-  font-family: "Poppins";
+  font-family: "Space Mono";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +42,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
 }
 
 .navbar .nav_link {
@@ -44,8 +50,16 @@ main {
   text-decoration: none;
   color: #303030;
   font-size: 1.2rem;
-  margin-left: 2rem;
   font-weight: 500;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar .nav_link:hover {
+  border-bottom: 1px solid #303030;
+}
+
+.navbar .nav_link:active {
+  border-bottom: 1px solid #303030;
 }
 
 .navbar .mobile {
@@ -75,6 +89,187 @@ main {
 
 .landingimage-container .landingimage {
   max-width: 100%;
+}
+
+.landingpage_text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.landingpage_text-container .landingpage_header {
+  padding: 0px 40px;
+  font-family: "Butler Stencil";
+  font-size: 2.5rem;
+  width: 858px;
+}
+
+.landingpage_desc {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 40px;
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.divider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.divider .line {
+  width: 640px;
+  max-width: 90%;
+}
+
+/* ===== Articles stuffs ===== */
+.articles_header {
+  font-family: "Butler Stencil";
+  font-size: 2.5rem;
+  color: #303030;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.articles-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 100px;
+  padding: 0 150px;
+  max-width: 100%;
+}
+
+.img-placeholder {
+  width: 350px;
+  height: 200px;
+  border: 2px solid #303030;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.img-placeholder:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.img-placeholder:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.placeholder_text {
+  opacity: 30%;
+  font-family: "Butler Stencil";
+  font-size: 2.5rem;
+  color: #303030;
+}
+
+.article_desc {
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 600;
+  color: #303030;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.article_desc:hover {
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+}
+
+.article_desc:focus {
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+}
+
+/*Footer Stuffs*/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #202020;
+  color: #fff;
+  padding: 30px;
+}
+
+footer h1 {
+  margin-bottom: 20px;
+  font-family: "Space Mono";
+}
+
+footer p {
+  font-family: "Space Mono";
+  text-align: center;
+  padding: 0 50px;
+}
+
+footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  gap: 50px;
+  margin: 30px;
+}
+
+footer .me {
+  margin-top: 20px;
+}
+
+footer .bx-heart {
+  color: #f8657d;
 }
 
 @media (min-width: 768px) {

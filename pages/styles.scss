@@ -9,6 +9,10 @@ body{
 li{
     list-style-type: none;
 }
+a{
+    text-decoration: none;
+    color: #fff;
+}
 main{
     margin: 50px 0px;
 }
@@ -18,7 +22,7 @@ main{
 
 /* ===== Fonts and Text ===== */
 // Nav
-$navFont: 'Poppins';
+$navFont: 'Space Mono';
 $universalTextColor: #303030;
 
 // Nav links
@@ -29,10 +33,11 @@ $navLogo: 2.5rem;
 $headingFont: 'Butler Stencil';
 $headingFontSize: 2.5rem;
 $headingDescFont: 'Space Mono';
+$headingDescFontSize: 1.2rem;
 
 // Article description
 $articleDescFont: 'Poppins';
-$articleDescSize: 1.4rem;
+$articleDescSize: 1rem;
 
 /* ===== Mixins ===== */
 
@@ -46,6 +51,33 @@ $articleDescSize: 1.4rem;
     justify-content: center;
 }
 
+@mixin headings {
+    font-family: $headingFont;
+    font-size: $headingFontSize;
+    color: $universalTextColor;
+}
+
+@mixin headingDesc {
+    font-family: $headingDescFont;
+    font-size: $headingDescFontSize;
+    color: $universalTextColor;
+}
+
+@mixin articleDesc {
+    font-family: $articleDescFont;
+    font-size: $articleDescSize;
+    font-weight: 600;
+    color: $universalTextColor;
+}
+@mixin articlesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 150px;
+}
+
 /* ===== Navbar Stuff ===== */
 .navbar{
     font-family: $navFont;
@@ -55,16 +87,28 @@ $articleDescSize: 1.4rem;
     padding: 20px 40px;
     .nav_items {
         display: flex;
+        gap: 30px;
     }
 
+  
     .nav_link {
         display: none;
         text-decoration: none;
         color: $universalTextColor;
         font-size: $navLinksSize;
-        margin-left: 2rem;
         font-weight: 500;
+        border-bottom: 1px solid transparent;
     }
+
+    .nav_link{
+        &:hover{
+            border-bottom: 1px solid #303030;
+        }
+        &:active{
+            border-bottom: 1px solid #303030;
+        }
+    }
+
     
     .mobile{
         display: flex;
@@ -86,6 +130,115 @@ $articleDescSize: 1.4rem;
     }
 }
 
+.landingpage_text-container{
+    @include flexNoAlign();
+    text-align: center;
+    margin-top: 40px;
+    .landingpage_header{
+        padding: 0px 40px;
+        font-family: $headingFont;
+        font-size: $headingFontSize;
+        width: 858px;
+    }
+}
+
+.landingpage_desc{
+    margin-top: 2rem;
+    @include flexNoAlign();
+    padding: 0px 40px;
+    text-align: center;
+    font-family: $headingDescFont;
+    font-size: $headingDescFontSize;
+    margin-bottom: 40px;
+}
+
+.divider{
+    @include flexNoAlign();
+    margin-bottom: 40px;
+    .line{
+        width: 640px;
+        max-width: 90%;
+    }
+}
+
+/* ===== Articles stuffs ===== */
+.articles_header{
+    @include headings();
+    text-align: center;
+    margin-bottom: 40px;
+}
+.articles-grid{
+    @include articlesGrid();
+    max-width: 100%;
+}
+
+.img-placeholder{
+    width: 350px;
+    height: 200px;
+    border: 2px solid #303030;
+    border-radius: 10px;
+    @include flexCenter();
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:focus{
+        transform: scale(1.1);
+    }
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.placeholder_text{
+    opacity: 30%;
+    @include headings();
+
+}
+.article_desc{
+    text-align: center;
+    @include articleDesc();
+    padding: 20px;
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline 2px;
+    }
+    &:focus{
+        text-decoration: underline 2px;
+    }
+}
+
+
+/*Footer Stuffs*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #202020;
+    color: #fff;
+    padding: 30px;
+    h1{
+        margin-bottom: 20px;
+        font-family: $headingDescFont;
+    }
+    p{
+        font-family: $headingDescFont;
+        text-align: center;
+        padding: 0 50px;
+    }
+    .socials{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        gap: 50px;
+        margin: 30px;
+    }
+    .me{
+        margin-top: 20px;
+    }
+    .bx-heart{
+        color: rgb(248, 101, 125);
+    }
+}
 
 @media (min-width: 768px){
     .navbar{
