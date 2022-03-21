@@ -18,6 +18,15 @@ a {
   color: #fff;
 }
 
+#bloglink {
+  color: #2f66ff;
+  border-bottom: 3px solid transparent;
+}
+
+#bloglink:hover {
+  border-bottom: 3px solid;
+}
+
 main {
   margin: 50px 0px;
 }
@@ -294,6 +303,15 @@ main-2 .more_articles-container .eye {
   color: #303030;
   text-align: center;
   margin-bottom: 40px;
+}
+
+.articles-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .articles-grid {

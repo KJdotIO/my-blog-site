@@ -13,6 +13,14 @@ a{
     text-decoration: none;
     color: #fff;
 }
+#bloglink{
+    color: rgb(47, 102, 255) ;
+    border-bottom: 3px solid transparent;
+    &:hover {
+        border-bottom: 3px solid;
+    }
+
+}
 main{
     margin: 50px 0px;
 }
@@ -137,6 +145,10 @@ main-2{
     @include headings();
     text-align: center;
     margin-bottom: 40px;
+}
+.articles-container{
+    display: flex;
+    justify-content: center;
 }
 .articles-grid{
     @include articlesGrid();
