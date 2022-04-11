@@ -44,33 +44,6 @@ main {
   gap: 30px;
 }
 
-.navbar .nav_link {
-  display: none;
-  text-decoration: none;
-  color: #303030;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border-bottom: 1px solid transparent;
-}
-
-.navbar .nav_link:hover {
-  border-bottom: 1px solid #303030;
-}
-
-.navbar .nav_link:active {
-  border-bottom: 1px solid #303030;
-}
-
-.navbar .mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2.5rem;
-}
-
 .logo {
   margin-right: auto;
   font-size: 2.5rem;
@@ -284,14 +257,5 @@ footer .me {
 
 footer .bx-heart {
   color: #f8657d;
-}
-
-@media (min-width: 768px) {
-  .navbar .nav_link {
-    display: block;
-  }
-  .navbar .mobile {
-    display: none;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

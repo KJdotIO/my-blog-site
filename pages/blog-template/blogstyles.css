@@ -388,12 +388,6 @@ main-2 .more_articles-container .eye {
 }
 
 @media (min-width: 768px) {
-  .navbar .nav_link {
-    display: block;
-  }
-  .navbar .mobile {
-    display: none;
-  }
   .title {
     padding: 0px 100px;
   }
